@@ -23,6 +23,23 @@
         app:layout_constraintVertical_bias="0.116" />
 
 
+    <EditText
+        android:id="@+id/editTextNumber1"
+        android:layout_width="184dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:hint="@string/hint"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:maxLength="4"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/boton1Calcular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.766"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo"
+        app:layout_constraintVertical_bias="0.664" />
+
     <Button
         android:id="@+id/boton1Calcular"
         android:layout_width="wrap_content"
@@ -31,10 +48,27 @@
         android:text="@string/botonCalc"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.364"
+        app:layout_constraintHorizontal_bias="0.387"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTitulo"
-        app:layout_constraintVertical_bias="0.558" />
+        app:layout_constraintVertical_bias="0.598" />
+
+    <EditText
+        android:id="@+id/editTextNumber2"
+        android:layout_width="187dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:hint="@string/hint"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:maxLength="4"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/boton1Calcular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.767"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber1"
+        app:layout_constraintVertical_bias="0.46" />
 
     <Button
         android:id="@+id/boton2Limpiar"
@@ -46,41 +80,10 @@
         android:textSize="13sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.836"
+        app:layout_constraintHorizontal_bias="0.86"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTitulo"
-        app:layout_constraintVertical_bias="0.561" />
-
-    <EditText
-        android:id="@+id/editTextNumber1"
-        android:layout_width="184dp"
-        android:layout_height="45dp"
-        android:ems="10"
-        android:hint="@string/hint"
-        android:importantForAutofill="no"
-        android:inputType="number"
-        android:maxLength="4"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/boton1Calcular"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.735"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTitulo"
-        app:layout_constraintVertical_bias="0.636" />
-
-    <TextView
-        android:id="@+id/tvVar2"
-        android:layout_width="43dp"
-        android:layout_height="39dp"
-        android:textColor="#070707"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/editTextNumber2"
-        app:layout_constraintHorizontal_bias="0.901"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvVar1"
-        app:layout_constraintVertical_bias="0.087" />
+        app:layout_constraintVertical_bias="0.601" />
 
     <TextView
         android:id="@+id/tvVar1"
@@ -92,27 +95,24 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/editTextNumber1"
-        app:layout_constraintHorizontal_bias="0.562"
+        app:layout_constraintHorizontal_bias="0.641"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.416" />
+        app:layout_constraintVertical_bias="0.449" />
 
-    <EditText
-        android:id="@+id/editTextNumber2"
-        android:layout_width="187dp"
-        android:layout_height="43dp"
-        android:ems="10"
-        android:hint="@string/hint"
-        android:importantForAutofill="no"
-        android:inputType="number"
-        android:maxLength="4"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/boton1Calcular"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.736"
+    <TextView
+        android:id="@+id/tvVar2"
+        android:layout_width="43dp"
+        android:layout_height="39dp"
+        android:textColor="#070707"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/editTextNumber2"
+        app:layout_constraintHorizontal_bias="0.906"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber1"
-        app:layout_constraintVertical_bias="0.464" />
+        app:layout_constraintTop_toBottomOf="@+id/tvVar1"
+        app:layout_constraintVertical_bias="0.093" />
 
     <TextView
         android:id="@+id/textViewResultado"
@@ -133,7 +133,7 @@
     <Spinner
         android:id="@+id/mySpinner"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:background="#AB92CCD3"
         android:textColor="#070707"
         android:textSize="30sp"
@@ -146,14 +146,14 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="400dp"
-        android:layout_height="80dp"
+        android:layout_width="295dp"
+        android:layout_height="85dp"
         app:layout_constraintBottom_toTopOf="@+id/editTextNumber1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintHorizontal_bias="0.724"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mySpinner"
-        app:layout_constraintVertical_bias="0.514" />
+        app:layout_constraintVertical_bias="0.565" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

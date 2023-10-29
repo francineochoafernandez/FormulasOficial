@@ -115,8 +115,8 @@ class MainActivity : AppCompatActivity() {
             else if (position_formula=="3")//Ley de Ohm
             {
                 binding.textViewResultado.text=""
-                binding.tvVar1.text="R"
-                binding.tvVar2.text="I"
+                binding.tvVar1.text="I"
+                binding.tvVar2.text="R"
                 binding.imageView.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.ohm))
             }
 
