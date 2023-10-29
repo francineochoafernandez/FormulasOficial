@@ -8,9 +8,11 @@
     <string name="hint">Escribe un número</string>
     <string name="creadora">Creadora: Francine Ochoa</string>
     <string name="version">Versión: 1.0.0.0</string>
+    <string name="Limpiar">Borrar Datos</string>
 
     <string-array name="formulas">
-        <item>Equivalencia entre masa y energía</item>
+        <item>Click aquí para seleccionar fórmula</item>
+        <item>Energía Cinética</item>
         <item>Teorema de Pitágoras</item>
         <item>Ley de Ohm</item>
     </string-array>
