@@ -10,6 +10,10 @@ import com.francineochoa.formulasoficial.databinding.ActivityMainBinding
 import com.francineochoa.formulasoficial.databinding.Diseno1Binding
 import android.widget.ArrayAdapter
 import android.widget.AdapterView
+import android.widget.ImageView
+import kotlin.math.pow
+import kotlin.math.sqrt
+import androidx.core.content.ContextCompat
 
 class MainActivity : AppCompatActivity() {
 
@@ -80,9 +84,11 @@ class MainActivity : AppCompatActivity() {
             binding.editTextNumber2.visibility=View.INVISIBLE
             binding.boton1Calcular.visibility=View.INVISIBLE
             binding.boton2Limpiar.visibility=View.INVISIBLE
+            binding.textViewResultado.visibility=View.INVISIBLE
+            binding.imageView.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.inicio))
+
         }
         else {
-            binding.textViewResultado.text = position_formula
 
             binding.tvVar1.visibility=View.VISIBLE
             binding.tvVar2.visibility=View.VISIBLE
@@ -90,30 +96,63 @@ class MainActivity : AppCompatActivity() {
             binding.editTextNumber2.visibility=View.VISIBLE
             binding.boton1Calcular.visibility=View.VISIBLE
             binding.boton2Limpiar.visibility=View.VISIBLE
+            binding.textViewResultado.visibility=View.VISIBLE
 
-            if (position_formula=="1")
+            if (position_formula=="1")//Energía Cinética
             {
+                binding.textViewResultado.text=""
                 binding.tvVar1.text="m"
                 binding.tvVar2.text="v"
+                binding.imageView.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.cinetica))
             }
-            else if (position_formula=="2")
+            else if (position_formula=="2")//Teorema de Pitágoras
             {
+                binding.textViewResultado.text=""
                 binding.tvVar1.text="a"
                 binding.tvVar2.text="b"
+                binding.imageView.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.pitagoras))
             }
-            else if (position_formula=="3")
+            else if (position_formula=="3")//Ley de Ohm
             {
+                binding.textViewResultado.text=""
                 binding.tvVar1.text="R"
                 binding.tvVar2.text="I"
+                binding.imageView.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.ohm))
             }
 
 
         }
     }
 
-    fun calculaFormula(numero1:Int, numero2:Int):Int{
-        val resultado=numero1+numero2
+    fun calculaFormula(numero1:Int, numero2:Int):Double{
+
+        val position_formula= binding.mySpinner.selectedItemPosition.toString()
+
+        val num1d=numero1.toDouble()
+        val num2d=numero2.toDouble()
+        var resultado=0.0
+        val unidad="[None]"
+
+        if (position_formula=="1")//Energía Cinética
+        {
+            //KE = (1/2) * m * v^2
+            resultado = (0.5) * num1d * num2d.pow(2.0)
+
+        }
+        else if (position_formula=="2")//Teorema de Pitágoras
+        {
+            //c=(a^2+b^2)^(1/2)
+            resultado= sqrt( num1d.pow(2.0) + num2d.pow(2.0) )
+        }
+        else if(position_formula=="3")//Ley de Ohm
+        {
+            //V=RI
+            resultado= num1d * num2d
+        }
+
         return resultado
+
+
     }
 
     //Funcion que corre cuando se le da click al boton
@@ -143,17 +182,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun clickLimpiar(view: View){
-        //Quitar seleccion de formula
-        //Quitar imagen de formula
+
         binding.editTextNumber1.text.clear()
         binding.editTextNumber2.text.clear()
         binding.textViewResultado.text=""
-        binding.tvVar1.visibility=View.INVISIBLE
-        binding.tvVar2.visibility=View.INVISIBLE
-        binding.mySpinner.setSelection(0)
-
     }
 
 
 
 }
+

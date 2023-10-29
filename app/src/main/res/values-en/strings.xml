@@ -3,11 +3,18 @@
     <string name="app_name">Formulas Official</string>
     <string name="correccion">Enter Number</string>
     <string name="error1">Please enter all numbers</string>
-    <string name="res">Result = %d</string>
+    <string name="res">Result = %.2f</string>
     <string name="titulo">Calculate your Formulas!</string>
     <string name="botonCalc">Calculate</string>
     <string name="hint">Write a number</string>
     <string name="creadora">Creator: Francine Ochoa</string>
     <string name="version">Version: 1.0.0.0</string>
     <string name="Limpiar">Erase Data</string>
+
+    <string-array name="formulas">
+        <item>Click here to select a formula</item>
+        <item>Kinetic Energy</item>
+        <item>Pythagorean Theorem</item>
+        <item>Ohm´s Law</item>
+    </string-array>
 </resources>

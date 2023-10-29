@@ -2,7 +2,7 @@
     <string name="app_name">Formulas Oficial</string>
     <string name="correccion">Ingresa Numero</string>
     <string name="error1">Por favor ingresa todos los numeros</string>
-    <string name="res">Resultado = %d</string>
+    <string name="res">Resultado = %.2f</string>
     <string name="titulo">¡Calcula tus Fórmulas!</string>
     <string name="botonCalc">Calcular</string>
     <string name="hint">Escribe un número</string>
