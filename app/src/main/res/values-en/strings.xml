@@ -17,4 +17,10 @@
         <item>Pythagorean Theorem</item>
         <item>Ohm´s Law</item>
     </string-array>
+    <string name="masa">m</string>
+    <string name="velocidad">v</string>
+    <string name="catetoa">a</string>
+    <string name="catetob">b</string>
+    <string name="corriente">I</string>
+    <string name="resistencia">R</string>
 </resources>

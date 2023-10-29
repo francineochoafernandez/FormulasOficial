@@ -100,23 +100,23 @@ class MainActivity : AppCompatActivity() {
 
             if (position_formula=="1")//Energía Cinética
             {
-                binding.textViewResultado.text=""
-                binding.tvVar1.text="m"
-                binding.tvVar2.text="v"
+                binding.textViewResultado.text=getString(R.string.cadena_vacia)
+                binding.tvVar1.text=getString(R.string.masa)
+                binding.tvVar2.text=getString(R.string.velocidad)
                 binding.imageView.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.cinetica))
             }
             else if (position_formula=="2")//Teorema de Pitágoras
             {
-                binding.textViewResultado.text=""
-                binding.tvVar1.text="a"
-                binding.tvVar2.text="b"
+                binding.textViewResultado.text=getString(R.string.cadena_vacia)
+                binding.tvVar1.text=getString(R.string.catetoa)
+                binding.tvVar2.text=getString(R.string.catetob)
                 binding.imageView.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.pitagoras))
             }
             else if (position_formula=="3")//Ley de Ohm
             {
-                binding.textViewResultado.text=""
-                binding.tvVar1.text="I"
-                binding.tvVar2.text="R"
+                binding.textViewResultado.text=getString(R.string.cadena_vacia)
+                binding.tvVar1.text=getString(R.string.corriente)
+                binding.tvVar2.text=getString(R.string.resistencia)
                 binding.imageView.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.ohm))
             }
 
@@ -131,7 +131,6 @@ class MainActivity : AppCompatActivity() {
         val num1d=numero1.toDouble()
         val num2d=numero2.toDouble()
         var resultado=0.0
-        val unidad="[None]"
 
         if (position_formula=="1")//Energía Cinética
         {
@@ -185,7 +184,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.editTextNumber1.text.clear()
         binding.editTextNumber2.text.clear()
-        binding.textViewResultado.text=""
+        binding.textViewResultado.text=getString(R.string.cadena_vacia)
     }
 
 

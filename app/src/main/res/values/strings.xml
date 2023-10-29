@@ -9,6 +9,14 @@
     <string name="creadora">Creadora: Francine Ochoa</string>
     <string name="version">Versión: 1.0.0.0</string>
     <string name="Limpiar">Borrar Datos</string>
+    <string name="masa">m</string>
+    <string name="velocidad">v</string>
+    <string name="catetoa">a</string>
+    <string name="catetob">b</string>
+    <string name="corriente">I</string>
+    <string name="resistencia">R</string>
+    <string name="cadena_vacia" translatable="false"></string>
+
 
     <string-array name="formulas">
         <item>Click aquí para seleccionar fórmula</item>
