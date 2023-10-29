@@ -22,6 +22,7 @@
         app:layout_constraintVertical_bias="0.116" />
 
     <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gifImageView"
         android:layout_width="214dp"
         android:layout_height="197dp"
         android:layout_marginTop="8dp"
@@ -32,6 +33,36 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTitulo"
         app:layout_constraintVertical_bias="0.138" />
+
+    <TextView
+        android:id="@+id/tvCreadora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#A12196F3"
+        android:text="@string/creadora"
+        android:textColor="#040303"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.639"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gifImageView"
+        app:layout_constraintVertical_bias="0.197" />
+
+    <TextView
+        android:id="@+id/tvVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#A1144C78"
+        android:text="@string/version"
+        android:textColor="#040303"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.621"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCreadora"
+        app:layout_constraintVertical_bias="0.1" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -33,6 +33,8 @@ class MainActivity : AppCompatActivity() {
         //binding.boton1Empezar.setOnClickListener{
         //    binding.tvTitulo.text ="¡Vamos!"
         //}
+        val formulas= resources.getStringArray(R.array.formulas)
+        val spinner = binding.mySpinner
 
     }
 
@@ -66,5 +68,7 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
+
 
 }
