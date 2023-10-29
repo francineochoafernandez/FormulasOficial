@@ -34,28 +34,34 @@ class MainActivity : AppCompatActivity() {
         //    binding.tvTitulo.text ="¡Vamos!"
         //}
 
+    }
 
+    fun calculaFormula(numero1:Int, numero2:Int):Int{
+        val resultado=numero1+numero2
+        return resultado
     }
 
     //Funcion que corre cuando se le da click al boton
     fun clickCalcular(view: View){
 
-        if( binding.editTextNumber1.text.isNotEmpty() &&  binding.editTextNumber2.text.isNotEmpty()  &&  binding.editTextNumber3.text.isNotEmpty() )
+        if( binding.editTextNumber1.text.isNotEmpty() &&  binding.editTextNumber2.text.isNotEmpty())
         {
             val numero1 = binding.editTextNumber1.text.toString().toInt()
             val numero2 = binding.editTextNumber2.text.toString().toInt()
-            val numero3 = binding.editTextNumber3.text.toString().toInt()
-            val resultado=numero1+numero2+numero3
+            val resultado=calculaFormula(numero1,numero2)
+
             binding.textViewResultado.text="Resultado= $resultado"
         }
         else
         {
+            if(binding.editTextNumber1.text.isEmpty())
+                binding.editTextNumber1.error="Ingresa Numero"
+
+            if(binding.editTextNumber2.text.isEmpty())
+                binding.editTextNumber2.error="Ingresa Numero"
+
             Toast.makeText(this,"Por favor ingresa todos los numeros",Toast.LENGTH_LONG).show()
         }
-
-
-
-
 
 
     }
