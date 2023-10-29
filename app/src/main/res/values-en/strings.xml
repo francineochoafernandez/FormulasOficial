@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Formulas Official</string>
+    <string name="correccion">Enter Number</string>
+    <string name="error1">Please enter all numbers</string>
+    <string name="res">Result = %d</string>
+    <string name="titulo">Calculate your Formulas!</string>
+    <string name="botonCalc">Calculate</string>
+    <string name="hint">Write a number</string>
+</resources>

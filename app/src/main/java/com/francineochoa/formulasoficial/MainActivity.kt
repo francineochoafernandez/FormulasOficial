@@ -48,19 +48,20 @@ class MainActivity : AppCompatActivity() {
         {
             val numero1 = binding.editTextNumber1.text.toString().toInt()
             val numero2 = binding.editTextNumber2.text.toString().toInt()
+
             val resultado=calculaFormula(numero1,numero2)
 
-            binding.textViewResultado.text="Resultado= $resultado"
+            binding.textViewResultado.text=getString(R.string.res, resultado)
         }
         else
         {
             if(binding.editTextNumber1.text.isEmpty())
-                binding.editTextNumber1.error="Ingresa Numero"
+                binding.editTextNumber1.error= getString(R.string.correccion)
 
             if(binding.editTextNumber2.text.isEmpty())
-                binding.editTextNumber2.error="Ingresa Numero"
+                binding.editTextNumber2.error= getString(R.string.correccion)
 
-            Toast.makeText(this,"Por favor ingresa todos los numeros",Toast.LENGTH_LONG).show()
+            Toast.makeText(this,getString(R.string.error1),Toast.LENGTH_LONG).show()
         }
 
 
